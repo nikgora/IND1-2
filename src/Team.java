@@ -7,6 +7,27 @@ public class Team {
     Car bolid2;
     ArrayList<People> personal;
 
+    public Team() {
+        name="";
+        bolid1 = new Car();
+        bolid2 = new Car();
+        personal = new ArrayList<>(0);
+    }
+
+    public Team(String name, Car bolid1, Car bolid2, ArrayList<People> personal) {
+        this.name = name;
+        this.bolid1 = bolid1;
+        this.bolid2 = bolid2;
+        this.personal = personal;
+    }
+
+
+    public void addPersonal(People people){
+        personal.add(people);
+    }
+    public void removePersonal(People people){
+        personal.remove(people);
+    }
 
     @Override
     public String toString() {

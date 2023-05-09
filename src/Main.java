@@ -9,6 +9,8 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
+        RaceTeam raceTeam = new RaceTeam();
+        raceTeam.setDriver1(new Drive());
 
     }
 }
