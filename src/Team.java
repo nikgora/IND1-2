@@ -6,8 +6,6 @@ public class Team {
     Car bolid1;
     Car bolid2;
     ArrayList<People> personal;
-    Drive driver1;
-    Drive driver2;
 
 
     @Override
@@ -17,8 +15,6 @@ public class Team {
                 ", bolid1=" + bolid1 +
                 ", bolid2=" + bolid2 +
                 ", personal=" + personal +
-                ", driver1=" + driver1 +
-                ", driver2=" + driver2 +
                 '}';
     }
 
@@ -54,19 +50,4 @@ public class Team {
         this.personal = personal;
     }
 
-    public People getDriver1() {
-        return driver1;
-    }
-
-    public void setDriver1(Drive driver1) {
-        this.driver1 = driver1;
-    }
-
-    public People getDriver2() {
-        return driver2;
-    }
-
-    public void setDriver2(Drive driver2) {
-        this.driver2 = driver2;
-    }
 }
