@@ -1,3 +1,6 @@
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 public class RaceTeam extends Team{
@@ -17,7 +20,8 @@ public class RaceTeam extends Team{
         this.driver2 = driver2;
     }
 
-
+    private void writeObject(ObjectOutputStream out) throws IOException{}
+    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException{}
     public People getDriver1() {
         return driver1;
     }
