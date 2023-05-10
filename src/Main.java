@@ -11,27 +11,29 @@ public class Main {
     //считывание книг с файла
 
     public static void main(String[] args) throws Exception {
-        ArrayList<RaceTeam> raceTeams = new ArrayList<RaceTeam>(5);
-        for (int i = 0; i < 5; i++)
-        {
-            raceTeams.add(i,new RaceTeam(  "Team: "+(i),new Car("car: "+(1),"motor: "+i,"f2"),new Car("car: "+(2),"motor: "+i,"f2"),new ArrayList<>(0),new Drive(Integer.toString(i),"gora",12,"race",0),new Drive(Integer.toString(i),"gora",12,"race",0)));
+        ArrayList<RaceTeam> raceTeams;
+        try {
+            ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(new File("data.data")));
+
+            raceTeams = (ArrayList<RaceTeam>) objectInputStream.readObject();
+            System.out.println(raceTeams);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
+
+        //some operation
+
+
+
+
+        // Print to file
         ObjectOutputStream objectOutputStream =
-                new ObjectOutputStream(new FileOutputStream(new File("line.data")));
-        for (int i = 0; i < 5; i++) {
-            RaceTeam raceTeam = raceTeams.get(i);
-            objectOutputStream.writeObject(raceTeam);
-            System.out.println(raceTeam);
-
-    }
-
+                new ObjectOutputStream(new FileOutputStream(new File("data.data")));
+        objectOutputStream.writeObject(raceTeams);
         objectOutputStream.close();
 
-
-
-        ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(new File("line.data")));
-        RaceTeam l1 = (RaceTeam) objectInputStream.readObject();
-        System.out.println(l1);
 
     }
 }
