@@ -24,4 +24,14 @@ public class Drive extends People {
     }
 
 
+    @Override
+    public String toString() {
+        return "Drive{" +
+                "score=" + score +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", profession='" + profession + '\'' +
+                '}';
+    }
 }
