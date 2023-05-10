@@ -1,4 +1,6 @@
-public class People {
+import java.io.Serializable;
+
+public class People implements Serializable {
     String name;
     String lastName;
     int age;

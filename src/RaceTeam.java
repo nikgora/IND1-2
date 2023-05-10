@@ -20,8 +20,6 @@ public class RaceTeam extends Team{
         this.driver2 = driver2;
     }
 
-    private void writeObject(ObjectOutputStream out) throws IOException{}
-    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException{}
     public People getDriver1() {
         return driver1;
     }

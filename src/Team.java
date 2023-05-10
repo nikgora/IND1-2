@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.sql.Driver;
 import java.util.ArrayList;
 
-public class Team {
+public class Team implements Serializable {
     String name;
     Car bolid1;
     Car bolid2;
